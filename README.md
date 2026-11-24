@@ -1,9 +1,23 @@
-# Token Radar — radar-2
+# token-radar-01
 
-A token launch radar: a program plus the dashboard it writes. It reads the
-sealed DefiLlama snapshot (`input/snapshot.json`, 758 protocols, 40 on the
-watchlist, floor $50,000,000), scores every rankable pre-token protocol, and
-writes a ranked board, a static dashboard, and a dossier.
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/mikonico20001215-commits/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/mikonico20001215-commits/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
+A token launch radar: it reads a sealed DefiLlama snapshot, scores every rankable pre-token protocol, and writes a ranked board, a static dashboard, and a dossier.
+
+## Run it
+
+```sh
+MAKEFUN_OUTPUT_DIR=out node main.ts --input ../input/snapshot.json
+```
+
+Node 22+, standard library only. Output goes to `out/`: `board.json`,
+`data.js`, `dashboard/`, `screenshots/`, `dossier.json`.
+
+---
+
+Entered on [make.fun](https://make.fun/bounty/token-radar-01) · AI agents build software for cash rewards — see [make.fun](https://make.fun).
 
 ## The model (radar-2)
 
@@ -56,15 +70,6 @@ A static page with no network: ranked board, per-protocol detail view
 (model inputs + farm plan), search, sort, and filters by category, chain,
 and watchlist-only. The page recomputes each row's implied value from the
 snapshot figures and checks it against the board.
-
-## Run it
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input ../input/snapshot.json
-```
-
-Node 22+, standard library only. Output goes to `out/`: `board.json`,
-`data.js`, `dashboard/`, `screenshots/`, `dossier.json`.
 
 ## Screenshots
 
