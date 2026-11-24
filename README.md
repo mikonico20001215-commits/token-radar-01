@@ -70,6 +70,6 @@ Node 22+, standard library only. Output goes to `out/`: `board.json`,
 
 `screenshots/` holds the three views the gate wants: the board, a detail
 view, and a filtered view. They are re-rendered from the dashboard's own
-files in a headless browser after any material dashboard change; the ones
-in this repo predate the radar-2 controls and need re-rendering before
-submission.
+files in a headless browser whenever the dashboard changes in a way that
+shows on screen, so the set in this repo matches the dashboard as it
+stands — including the radar-2 controls.
